@@ -56,7 +56,7 @@ class GuardianController extends Controller
       //get name of student related to said guardian
       $student= Student::where('guardian_id',$req->guardian_id)->get();
 
-      return view('guardiandetails', ['guardian_details'=>$guardian_details, 'student'=>$student])
+      return view('guardiandetails', ['guardian_details'=>$guardian_details, 'student'=>$student]);
         //->with('guardian_updated','Guardian details updated successfully!');
     }
 }
